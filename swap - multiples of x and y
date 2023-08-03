@@ -1,0 +1,27 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+m,x=map(int,input().split())
+for i in range(n):
+    if l[i]%m==0:
+        c=i
+        k=l[i]
+        break
+p=0    
+for i in range(n-1,0,-1):
+    if l[i]%x==0:
+        p=i
+        u=l[i]
+        break
+o,m=0,0
+t=[]
+for i in range(n):
+    if c==i and o==0:
+        t.append(u)
+    else:
+        t.append(l[i])
+for i in range(n-1,0,-1):
+    if p==i:
+        t[i]=k
+        break
+print(*t,sep=" ")        
