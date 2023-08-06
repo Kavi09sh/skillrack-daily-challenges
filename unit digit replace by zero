@@ -1,0 +1,12 @@
+num=input().strip()
+k=int(n)
+u=k%10
+j=''
+for i in n:
+    o=int(i)
+    if o==u:
+        j+='0'
+    else:
+        j+=i
+        print(j)
+print(int(j))        
